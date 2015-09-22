@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Options - Facebook Messenger Notifications [Messenger.com mod]</title>
+<style type="text/css">
+html,body{margin:0;padding:0}
+body{color:#333;font:13px 'Liberation Sans', Helvetica, Arial, sans-serif}
+h1{font-size:200%;font-weight:normal;margin:0;padding:0.5em 1em;text-shadow:#fff 0 1px 2px}
+h2{padding:0 2em}
+p{padding:0 2em}
+#navbar-container{background:#eee;border-right:1px solid #ccc;position:fixed;width:216px;height:100%}
+#navbar-container h1{-webkit-padding-end:24px;text-align:end;}
+#mainview-content{margin-left:216px}
+</style>
+<script type="text/javascript" src="options.js"></script>
+</head>
+<body>
+<div id="navbar-container"><h1>Options</h1></div>
+<div id="mainview-content">
+<h1><img src="icon.png" alt="[icon]" /> Facebook Messenger Notifications [Messenger.com mod]</h1>
+<p><label><input type="checkbox" id="showFN" /> Also display Facebook Notifications</label> [default: no]</p>
+<p><label><input type="checkbox" id="useHttps" /> Always use https instead of http</label> [default: yes]</p>
+<p><label><input type="checkbox" id="alwaysNew" /> Always open on a new tab</label> [default: yes]</p>
+<p><label><input type="checkbox" id="showZero" /> On zero messages, show "0"</label> [default: no]</p>
+<p><label><input type="checkbox" id="playSound" /> On new messages, play a sound</label> [default: no]</p>
+<p><label><input type="checkbox" id="showNoti" /> On new messages, show desktop notifications</label> [default: no]</p>
+<p>Close desktop notification after (seconds): <input type="text" id="timeNoti" /> (zero is never) [default: 20]</p>
+<p>Refresh interval (minutes):<input type="text" id="refreshInterval" /> [default: 1]</p>
+<p><button type="button" id="saveButton" />Save</button> <button type="button" id="restoreButton" />Restore Default</button></p>
+<h2>Optional Permissions</h2>
+<p><label><input type="checkbox" id="useBg" /> Run this extension on background (Keeps working even after closing Google Chrome)</label></p>
+<h2>License</h2>
+<p>Code, ©2011-2012 daPhyre.</p>
+<p>Based on the code from <a href="http://github.com/daPhyre/notifications-crx">http://github.com/daPhyre/notifications-crx</a> and the <a href="https://chrome.google.com/webstore/detail/facebook-messenger-notifi/pdndipdnnemoafpneeeljgiimhgkjkfg">Facebook Messenger Notifications extension</a>.</p>
+<p><a href="https://github.com/mzino/chrome-messenger-notifications">Modded by oniZM, 2015</a></p>
+</div>
+</body>
+</html>

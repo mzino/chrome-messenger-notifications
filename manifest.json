@@ -1,0 +1,18 @@
+{
+   "manifest_version": 2,
+   "name": "Facebook Messenger Notifications [Messenger.com mod]",
+   "version": "2.2",
+   "description": "Messenger.com notifications",
+   "icons": { "128": "icon128.png", "16": "icon16.png", "48": "icon48.png" },
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Facebook Messenger Notifications [Messenger.com mod]"
+   },
+   "optional_permissions": [ "background" ],
+   "options_page": "options.html",
+   "permissions": [ "tabs", "notifications", "http://www.facebook.com/", "https://www.facebook.com/" ],
+   "web_accessible_resources": [ "icon48.png" ]
+}
