@@ -37,6 +37,11 @@ function loadData(){
 				var myString=xmlDoc.substr(loc,120);
 				fUser=myString.substring(myString.indexOf('>')+1,myString.indexOf('<'));
 			}
+			else if(xmlDoc.indexOf('profile_pic_header_')>0){
+				loc=xmlDoc.indexOf('profile_pic_header_');
+				var myString=xmlDoc.substr(loc+70,120);
+				fUser=myString.substring(myString.indexOf('>')+1,myString.indexOf('<'));
+			}
 			if(fUser){
 				var lastCounter=counter;
 				var noti=0;
