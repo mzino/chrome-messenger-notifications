@@ -1,6 +1,8 @@
-var host='www.messenger.com';
-var pathNew='';
-var pathZero='';
+var hostmes='www.messenger.com';
+var hostfb='www.facebook.com'
+var path='messages';
+var useFB=false;
+var useFBzero=false;
 var showFN=false;
 var counter=0;
 var newNotif=false;
@@ -59,7 +61,7 @@ function loadData(){
 						noti=parseInt(myString.substring(myString.indexOf('>')+1,myString.indexOf('<')),10);
 					}
 				}
-				var badgeTitle=fUser+' - Facebook Messenger';
+				var badgeTitle='Facebook Messenger';
 				if(counter>0) badgeTitle+='\n> '+counter+' Messages';
 				if(showFN&&noti>0) badgeTitle+='\n> '+noti+' Notifications';
 
@@ -96,8 +98,9 @@ function loadData(){
 	timerVar=window.setTimeout(loadData,timerDelay);
 }
 function init(){
-	pathNew=(localStorage.pathNew||localStorage.pathNew=='')?localStorage.pathNew:pathNew;
-	pathZero=(localStorage.pathZero||localStorage.pathZero=='')?localStorage.pathZero:pathZero;
+	path=(localStorage.path||localStorage.path=='')?localStorage.path:path;
+	useFB=(localStorage.useFB)?(localStorage.useFB=='yes'):false;
+	useFBzero=(localStorage.useFBzero)?(localStorage.useFBzero=='yes'):false;
 	showFN=(localStorage.showFN)?(localStorage.showFN=='yes'):false;
 	protocol=(localStorage.useHttps=='yes')?'https':'http';
 	alwaysNew=(localStorage.alwaysNew)?(localStorage.alwaysNew=='yes'):true;
@@ -143,9 +146,15 @@ function openUrl(uri){
 }
 function openPage(){
 	if(counter>0)
-		openUrl(protocol+'://'+host+'/'+pathNew);
+		if(useFB==true)
+			openUrl(protocol+'://'+hostfb+'/'+path);
+		else
+			openUrl(protocol+'://'+hostmes);
 	else
-		openUrl(protocol+'://'+host+'/'+pathZero);
+		if(useFB==true || useFBzero==true)
+			openUrl(protocol+'://'+hostfb);
+		else
+			openUrl(protocol+'://'+hostmes);
 	newNotif=false;
 	loadData();
 }

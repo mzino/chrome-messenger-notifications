@@ -2,6 +2,8 @@ function $(id){return document.getElementById(id);}
 function enableSave(){$('saveButton').disabled=false;}
 function disableSave(){$('saveButton').disabled=true;}
 window.onload=function(){
+	$('useFB').addEventListener('click',enableSave);
+	$('useFBzero').addEventListener('click',enableSave);
 	$('showFN').addEventListener('click',enableSave);
 	$('useHttps').addEventListener('click',enableSave);
 	$('alwaysNew').addEventListener('click',enableSave);
@@ -16,6 +18,8 @@ window.onload=function(){
 	init();
 }
 function init(){
+	$('useFB').checked=(localStorage.useFB)?(localStorage.useFB == 'yes'):false;
+	$('useFBzero').checked=(localStorage.useFBzero)?(localStorage.useFBzero == 'yes'):false;
 	$('showFN').checked=(localStorage.showFN)?(localStorage.showFN == 'yes'):false;
 	$('useHttps').checked=(localStorage.useHttps)?(localStorage.useHttps == 'yes'):true;
 	$('alwaysNew').checked=(localStorage.alwaysNew)?(localStorage.alwaysNew == 'yes'):true;
@@ -30,6 +34,8 @@ function init(){
 	});
 }
 function save(){
+	localStorage.useFB=$('useFB').checked?'yes':'no';
+	localStorage.useFBzero=$('useFBzero').checked?'yes':'no';
 	localStorage.showFN=$('showFN').checked?'yes':'no';
 	localStorage.useHttps=$('useHttps').checked?'yes':'no';
 	localStorage.alwaysNew=$('alwaysNew').checked?'yes':'no';

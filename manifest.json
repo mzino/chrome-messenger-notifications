@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "name": "Facebook Messenger Notifications [Mod]",
-   "version": "2.2.2",
+   "version": "2.3",
    "description": "Messenger.com notifications",
    "icons": { "128": "icon128.png", "16": "icon16.png", "48": "icon48.png" },
    "background": {
