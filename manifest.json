@@ -1,15 +1,15 @@
 {
    "manifest_version": 2,
-   "name": "Facebook Messenger Notifications [Mod]",
-   "version": "2.3",
-   "description": "Messenger.com notifications",
+   "name": "Social Notifications [Mod]",
+   "version": "2.4",
+   "description": "Social notifications",
    "icons": { "128": "icon128.png", "16": "icon16.png", "48": "icon48.png" },
    "background": {
       "scripts": [ "background.js" ]
    },
    "browser_action": {
       "default_icon": "icon.png",
-      "default_title": "Facebook Messenger Notifications [Messenger.com mod]"
+      "default_title": "Social Notifications [Mod]"
    },
    "optional_permissions": [ "background" ],
    "options_page": "options.html",
