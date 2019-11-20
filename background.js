@@ -23,7 +23,7 @@ var BADGE_LOADING={color:[204,204,51,255]};
 var BADGE_INACTIVE={color:[153,153,153,255]};
 function loadData(){
 	var xhr=new XMLHttpRequest();
-	xhr.open('GET','http://www.facebook.com/home.php',true);
+	xhr.open('GET','https://www.facebook.com/home.php',true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
 			chrome.browserAction.setBadgeBackgroundColor(BADGE_INACTIVE);
