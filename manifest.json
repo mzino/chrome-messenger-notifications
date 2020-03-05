@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Social Notifications [Mod]",
-  "version": "2.43",
+  "version": "2.44",
   "description": "Social notifications and quick link",
   "icons": {
     "128": "icon128.png",
@@ -13,8 +13,7 @@
     "default_title": "Social Notifications [Mod]"
    },
   "background": {
-    "scripts": [ "background.js" ],
-    "persistent": false
+    "scripts": [ "background.js" ]
   },
   "homepage_url": "https://github.com/mzino/chrome-messenger-notifications",
   "optional_permissions": [ "background" ],

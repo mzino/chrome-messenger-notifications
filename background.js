@@ -61,7 +61,7 @@ function loadData(){
 						noti=parseInt(myString.substring(myString.indexOf('>')+1,myString.indexOf('<')),10);
 					}
 				}
-				var badgeTitle='Facebook Messenger';
+				var badgeTitle='Messenger';
 				if(counter>0) badgeTitle+='\n> '+counter+' Messages';
 				if(showFN&&noti>0) badgeTitle+='\n> '+noti+' Notifications';
 
@@ -75,7 +75,7 @@ function loadData(){
 					if(playSound)audio.play();
 					if(showNoti){
 						if(deskNoti)deskNoti.cancel();
-						deskNoti=webkitNotifications.createNotification('icon48.png','Facebook Messenger Notifications','You have '+counter+' new messages');
+						deskNoti=webkitNotifications.createNotification('icon48.png','Messenger Notifications','You have '+counter+' new messages');
 						deskNoti.onclick=function(){openPage();this.cancel()};
 						deskNoti.show();
 						if(timeNoti){window.setTimeout(function(){deskNoti.cancel();},timeNoti);}
